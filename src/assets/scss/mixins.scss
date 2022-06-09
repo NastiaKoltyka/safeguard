@@ -1,0 +1,13 @@
+@import "../scss/fonts.scss";
+@import "../scss/colors.scss";
+
+@mixin title {
+  font-family: $anton-font;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 75px;
+
+  span {
+    color: $yellow;
+  }
+}

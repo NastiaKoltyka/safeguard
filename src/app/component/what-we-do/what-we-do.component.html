@@ -1,0 +1,14 @@
+<div class="main-information">
+  <div class="title"> <span>What We </span> Do</div>
+  <div class="works-list">
+    <div *ngFor="let work of works; let i = index">
+      <div class="title-work">
+        <div class="grey">{{i+1}}</div>
+        <div>{{work.text}}</div>
+      </div>
+      <div class="picture-wrapper">
+        <img [src]="work.image" alt="">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+@import "../../../assets/scss/fonts.scss";
+@import "../../../assets/scss/colors.scss";
+@import "../../../assets/scss/mixins.scss";
+
+.main-information {
+  margin: 0px 0px 116px 375px;
+
+  .title {
+    text-transform: uppercase;
+    margin-bottom: 116px;
+    @include title;
+  }
+
+  .works-list {
+    display: flex;
+
+    .title-work {
+      display: flex;
+
+      div {
+        width: 189px;
+        height: 76px;
+        font-family: $ubuntu-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 160%;
+        display: flex;
+        align-items: center;
+
+      }
+
+      .grey {
+        margin-right: 15px;
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        background-color: #FBFBFB;
+        color: $yellow;
+        line-height: 28px;
+        justify-content: center;
+
+      }
+    }
+
+    .picture-wrapper {
+      margin-top: 49px;
+      width: 270px;
+      height: 476px;
+      background: #D3DFFE;
+      border-radius: 30px;
+      margin-right: 30px;
+    }
+
+  }
+
+}
