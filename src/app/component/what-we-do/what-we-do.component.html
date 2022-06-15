@@ -1,14 +1,47 @@
 <div class="main-information">
   <div class="title"> <span>What We </span> Do</div>
   <div class="works-list">
-    <div *ngFor="let work of works; let i = index">
+    <div *ngFor="let work of works; let i = index" class="work">
       <div class="title-work">
         <div class="grey">{{i+1}}</div>
         <div>{{work.text}}</div>
       </div>
-      <div class="picture-wrapper">
+      <div class="picture-wrapper" [ngClass]="{mobile: i===1, laptop:i===3}">
         <img [src]="work.image" alt="">
+      </div>
+      <div class="more-information">
+        <p>Read More</p>
+        <img src="../../../assets/images/arrow.png" alt="">
+      </div>
+      <div class="whatsApp" *ngIf="i===1" [@whatsAppPanel]="whatsAppPanel">
+        <p [@whatsAppChildAnimation]="'expanded'">i brought you something interesting</p>
+      </div>
+      <div class="gmail"  [@gmailPanel]="gmailPanel" *ngIf="i===1">
+        <p [@gmailChildAnimation]="'expanded'">Pss. Some secret info for you!</p>
+      </div>
+    </div>
+    <div *ngFor="let work of works; let i = index" class="work hidden">
+      <div class="title-work">
+        <div class="grey">{{i+1}}</div>
+        <div>{{work.text}}</div>
+      </div>
+      <div class="picture-wrapper" [ngClass]="{mobile: i===1, laptop:i===3}">
+        <img [src]="work.image" alt="">
+      </div>
+      <div class="more-information">
+        <p>Read More</p>
+        <img src="../../../assets/images/arrow.png" alt="">
+      </div>
+      <div class="whatsApp" *ngIf="i===1" [@whatsAppPanel]="whatsAppPanel">
+        <p [@whatsAppChildAnimation]="'expanded'">i brought you something interesting</p>
+      </div>
+      <div class="gmail"  [@gmailPanel]="gmailPanel" *ngIf="i===1">
+        <p [@gmailChildAnimation]="'expanded'">Pss. Some secret info for you!</p>
       </div>
     </div>
   </div>
+</div>
+<div class="buttons">
+  <button>Our Services</button>
+  <button class="contact">Contact Us</button>
 </div>

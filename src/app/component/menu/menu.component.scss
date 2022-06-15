@@ -1,0 +1,52 @@
+@import "../../../assets/scss/fonts.scss";
+@import "../../../assets/scss/colors.scss";
+
+.main {
+  width: 375px;
+  height: 812px;
+  background: $yellow;
+  font-family: $ubuntu-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 40px 27px 94px 31px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  .image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    .logo {
+      width: 160px;
+      height: 32px;
+    }
+    .close {
+      cursor: pointer;
+    }
+  }
+  .buttons {
+    margin-bottom: 60px;
+    div {
+      margin-bottom: 28px;
+      cursor: pointer;
+    }
+  }
+  .services {
+    div {
+      margin-bottom: 28px;
+      cursor: pointer;
+    }
+    .gray {
+      font-size: 18px;
+      line-height: 29px;
+      color: gray;
+      cursor: auto;
+    }
+  }
+}

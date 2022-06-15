@@ -1,11 +1,18 @@
 @import "../../../assets/scss/fonts.scss";
 @import "../../../assets/scss/colors.scss";
+@import "../../../assets/scss/media-queries.scss";
 
 .header {
   height: 876px;
   background-color: $yellow;
   padding: 48px 11px 55px 375px;
-
+  @include for-desktop-md {
+    padding: 48px 0px 55px 106px;
+  }
+  @include for-tablet {
+    height: 100%;
+    padding: 48px 0px 55px 0px;
+  }
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -13,10 +20,21 @@
     .logo {
       height: 39px;
       width: 192px;
+      @include for-tablet {
+        height: 100%;
+        margin-left: 106px;
+      }
+      @include for-phone{
+        width: 162px;
+        height: 35px;
+        margin-left: 25px;
+      }
     }
 
     .buttons {
-      margin-right: 365px;
+      @include for-tablet {
+        display: none;
+      }
 
       button {
         font-family: $ubuntu-font;
@@ -32,16 +50,30 @@
       }
 
       button:hover {
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         border-radius: 12px;
       }
-
+    }
+    .menu{
+      display: none;
+      background-image: url("../../../assets/images/Group\ 106.png");
+      @include for-tablet {
+        display: block;
+        width: 30px;
+        height: 19px;
+        margin-right: 24px;
+      }
     }
   }
 
   .main-information {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    @include for-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .description {
       .title {
         font-family: $anton-font;
@@ -53,6 +85,14 @@
         line-height: 130%;
         margin-top: 191px;
         text-transform: uppercase;
+        @include for-phone{
+          margin-top: 68px;
+          width: 271px;
+          height: 109px;
+          left: 24px;
+          top: 139px;
+          font-size: 42px;
+        }
       }
 
       .text {
@@ -64,6 +104,12 @@
         font-size: 18px;
         line-height: 160%;
         margin-top: 33px;
+        @include for-phone{
+          margin-top: 25px;
+          width: 300px;
+          height: 66px;
+          font-size: 14px;
+        }
       }
 
       .learn-more {
@@ -75,11 +121,21 @@
         font-size: 18px;
         line-height: 21px;
         text-align: center;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         margin-top: 63px;
         border-radius: 16px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
         border: none;
         cursor: pointer;
+
+        @include for-phone{
+          width: 154px;
+          height: 55px;
+          position: absolute;
+          font-size: 14px;
+          line-height: 16px;
+          margin-top: 30px;
+        }
       }
 
       .learn-more:hover {
@@ -91,8 +147,29 @@
       width: 826px;
       height: 647px;
       margin-top: 91px;
+      @include for-desktop-md {
+        width: 600px;
+        height: auto;
+        margin-top: 168px;
+      }
+      @include for-tablet {
+        margin-top: 45px;
+      }
+      @include for-phone{
+        margin-top: 112px;
+        width: 401px;
+        height: 313px;
+      }
+      img {
+        width: 100%;
+        @include for-desktop-md {
+          object-position: 61px;
+        }
+      }
     }
   }
-
-
+}
+:host {
+  display: block;
+  overflow-x: hidden;
 }

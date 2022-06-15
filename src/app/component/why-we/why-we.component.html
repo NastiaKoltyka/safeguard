@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="container">
+    <div class="title">Why We</div>
+    <p>A team dedicated to protect your assets and reputation.<br> With our global footprint and our specialized team
+      members
+      and <br> partners we know what it takes to make sure that we can deliver <br> a minimum risk environment for our
+      clients.</p>
+    <div class="blocks">
+      <div class="wrapper" *ngFor="let info of information">
+        <div class="counter">{{info.counter}}</div>
+        <div class="description">{{info.description}}</div>
+        <div class="definition">{{info.definition}}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { info } from '../../interface/info';
 
 @Component({
   selector: 'app-who-we-are',
@@ -6,27 +8,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./who-we-are.component.scss']
 })
 export class WhoWeAreComponent implements OnInit {
-  statisticInformation=[
+  statisticInformation:info[]=[
     {
-      number:'3.5',
+      counter:'3.5',
       description:'Billions',
-      definition:'Preventive measurements implemented (cost reduction, loss of investment).'
+      definition:'Preventive measurements implemented <br>(cost reduction, loss of investment).'
     },
     {
-      number:'25+',
+      counter:'25+',
       description:'Years',
-      definition:'Of experience in minimizing risk and protecting assets.'
+      definition:'Of experience in minimizing risk <br> and protecting assets.'
     },
     {
-      number:'1.5',
+      counter:'1.5',
       description:'Billions',
-      definition:'Of experience in minimizing risk and protecting assets.'
+      definition:'Of experience in minimizing risk <br> and protecting assets.'
     }
   ]
-  constructor() { }
+  pageYoffset = 0;
+  @HostListener('window:scroll', ['$event']) onScroll(event:Event){
+    this.pageYoffset = window.pageYOffset;
+ }
+  constructor(private scroll: ViewportScroller) { }
 
   ngOnInit(): void {
-    console.log(this.statisticInformation)
+    
   }
+  scrollToTop(){
+    this.scroll.scrollToPosition([0,0]);
+}
+
 
 }

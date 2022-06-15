@@ -1,0 +1,21 @@
+<div class="main" *ngIf="menuIsOpened">
+  <div class="image-wrapper">
+    <div class="logo">
+      <img src="../../../assets/images/logo.png" alt="logo">
+    </div>
+    <div class="close" (click)="close()">X</div>
+  </div>
+  <div class="buttons">
+    <div routerLink="./" fragment="home"(click)="close()" >Home</div>
+    <div routerLink="./" fragment="about-us" (click)="close()">About Us</div>
+    <div routerLink="./" fragment="what-we-do"(click)="close()">What We Do</div>
+    <div routerLink="./" fragment="contact-us"(click)="close()">Contact Us</div>
+  </div>
+  <div class="services">
+    <div class="gray">Services</div>
+    <div>Training and Implementation</div>
+    <div>Cyber Consultants</div>
+    <div>Consultancy and brand protection</div>
+    <div>Software</div>
+  </div>
+</div>

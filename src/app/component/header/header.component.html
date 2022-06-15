@@ -4,9 +4,18 @@
       <img src="assets/images/logo.png" alt="Safeguard">
     </div>
     <div class="buttons">
-      <button *ngFor="let button of navigationButtons">{{button}}</button>
+      <button routerLink="./" fragment="home">Home</button>
+      <button routerLink="./" fragment="about-us">About Us</button>
+      <button routerLink="./" fragment="what-we-do">What We Do</button>
+      <button routerLink="./" fragment="contact-us">Contact Us</button>
+    </div>
+    <div>
+      <div class="menu" (click)="openMenu()">
+      </div>
+      <app-menu [menuIsOpened]="menuIsOpened" (menuIsClosed)="closeWindow()"></app-menu>
     </div>
   </div>
+
   <div class="main-information">
     <div class="description">
       <div class="title">Never Caught Off-Guard Again</div>
