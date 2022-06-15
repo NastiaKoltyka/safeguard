@@ -6,13 +6,16 @@
   height: 876px;
   background-color: $yellow;
   padding: 48px 11px 55px 375px;
+
   @include for-desktop-md {
     padding: 48px 0px 55px 106px;
   }
+
   @include for-tablet {
     height: 100%;
     padding: 48px 0px 55px 0px;
   }
+
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -20,11 +23,13 @@
     .logo {
       height: 39px;
       width: 192px;
+
       @include for-tablet {
         height: 100%;
         margin-left: 106px;
       }
-      @include for-phone{
+
+      @include for-phone {
         width: 162px;
         height: 35px;
         margin-left: 25px;
@@ -55,9 +60,11 @@
         box-shadow: 4px 4px 8px rgb(0 0 0 / 8%);
       }
     }
-    .menu{
+
+    .menu {
       display: none;
       background-image: url("../../../assets/images/Group\ 106.png");
+
       @include for-tablet {
         display: block;
         width: 30px;
@@ -70,6 +77,7 @@
   .main-information {
     display: flex;
     justify-content: space-between;
+
     @include for-tablet {
       flex-direction: column;
       align-items: center;
@@ -86,7 +94,8 @@
         line-height: 130%;
         margin-top: 191px;
         text-transform: uppercase;
-        @include for-phone{
+
+        @include for-phone {
           margin-top: 68px;
           width: 271px;
           height: 109px;
@@ -105,7 +114,8 @@
         font-size: 18px;
         line-height: 160%;
         margin-top: 33px;
-        @include for-phone{
+
+        @include for-phone {
           margin-top: 25px;
           width: 300px;
           height: 66px;
@@ -129,7 +139,7 @@
         border: none;
         cursor: pointer;
 
-        @include for-phone{
+        @include for-phone {
           width: 154px;
           height: 55px;
           position: absolute;
@@ -148,21 +158,26 @@
       width: 826px;
       height: 647px;
       margin-top: 91px;
+
       @include for-desktop-md {
         width: 600px;
         height: auto;
         margin-top: 168px;
       }
+
       @include for-tablet {
         margin-top: 45px;
       }
-      @include for-phone{
+
+      @include for-phone {
         margin-top: 112px;
         width: 401px;
         height: 313px;
       }
+
       img {
         width: 100%;
+
         @include for-desktop-md {
           object-position: 61px;
         }
@@ -170,6 +185,7 @@
     }
   }
 }
+
 :host {
   display: block;
   overflow-x: hidden;

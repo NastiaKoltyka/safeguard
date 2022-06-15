@@ -2,22 +2,27 @@
 @import "../../../assets/scss/colors.scss";
 @import "../../../assets/scss/mixins.scss";
 @import "../../../assets/scss/media-queries.scss";
+
 .main {
   width: 100%;
   height: 885px;
   background-color: $yellow;
   margin-bottom: 160px;
   display: flex;
+
   @include for-tablet {
     height: auto;
     margin-bottom: 131px;
   }
+
   @include for-phone {
     margin-bottom: 90px;
   }
+
   .container {
     width: 1170px;
     margin: auto;
+
     @include for-tablet {
       width: 100%;
       display: flex;
@@ -26,6 +31,7 @@
       align-items: center;
       margin: 50px auto 61px;
     }
+
     .title {
       width: 151px;
       height: 75px;
@@ -34,10 +40,12 @@
       font-size: 50px;
       line-height: 75px;
       text-transform: uppercase;
+
       @include for-tablet {
         width: 570px;
       }
-      @include for-phone{
+
+      @include for-phone {
         width: 327px;
         height: 48px;
         font-size: 32px;
@@ -45,6 +53,7 @@
         margin-top: 50px;
       }
     }
+
     p {
       width: 570px;
       height: 128px;
@@ -53,7 +62,8 @@
       font-size: 18px;
       line-height: 180%;
       margin: 10px 0px 60px;
-      @include for-phone{
+
+      @include for-phone {
         width: 325px;
         height: 132px;
         font-size: 14px;
@@ -61,16 +71,20 @@
         margin: 15px 0px 40px;
       }
     }
+
     .blocks {
       display: flex;
       justify-content: space-between;
+
       @include for-tablet {
         width: 570px;
         flex-wrap: wrap;
       }
-      @include for-phone{
+
+      @include for-phone {
         width: 327px;
       }
+
       .wrapper {
         width: 270px;
         height: 294px;
@@ -82,39 +96,47 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         @include for-tablet {
           margin-bottom: 16px;
         }
-        @include for-phone{
+
+        @include for-phone {
           width: 155px;
           height: 170px;
         }
+
         .counter {
           font-weight: 700;
           font-size: 90px;
           line-height: 103px;
           color: $yellow;
-          @include for-phone{
+
+          @include for-phone {
             font-size: 50px;
             line-height: 57px;
           }
         }
+
         .description {
           font-weight: 700;
           font-size: 24px;
           line-height: 38px;
-          @include for-phone{
+
+          @include for-phone {
             font-size: 14px;
             line-height: 16px;
           }
         }
+
         .definition {
           font-weight: 400;
           font-size: 16px;
           line-height: 29px;
           text-align: center;
           color: $gray;
-          @include for-phone{
+
+          @include for-phone {
             font-size: 10px;
             line-height: 18px;
           }

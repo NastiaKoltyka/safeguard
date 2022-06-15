@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {
   trigger,
   state,
@@ -45,7 +45,7 @@ import {
     ]),
   ],
 })
-export class WhatWeDoComponent implements OnInit {
+export class WhatWeDoComponent {
   works = [
     {
       text: 'Training and Implementation',
@@ -68,7 +68,6 @@ export class WhatWeDoComponent implements OnInit {
   gmailPanel: string = 'initial';
   constructor() {}
 
-  ngOnInit(): void {}
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     if (window.scrollY >= 1958) {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss'],
 })
-export class ContactUsComponent implements OnInit {
+export class ContactUsComponent {
   works = [
     {
       title: 'Safeguarding our <br> clients',
@@ -30,16 +30,15 @@ export class ContactUsComponent implements OnInit {
     this.contactForm = new FormGroup({
       fullName: new FormControl('', Validators.required),
       companyName: new FormControl('', Validators.required),
-      "phoneNumber": new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
-      email: new FormControl('', [
+      phoneNumber: new FormControl('', [
         Validators.required,
-        Validators.email,
+        Validators.pattern('[0-9]{10}'),
       ]),
+      email: new FormControl('', [Validators.required, Validators.email]),
       message: new FormControl(''),
     });
   }
 
-  ngOnInit(): void { }
   submit() {
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);

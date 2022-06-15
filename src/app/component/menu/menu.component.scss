@@ -23,26 +23,32 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
+
     .logo {
       width: 160px;
       height: 32px;
     }
+
     .close {
       cursor: pointer;
     }
   }
+
   .buttons {
     margin-bottom: 60px;
+
     div {
       margin-bottom: 28px;
       cursor: pointer;
     }
   }
+
   .services {
     div {
       margin-bottom: 28px;
       cursor: pointer;
     }
+
     .gray {
       font-size: 18px;
       line-height: 29px;

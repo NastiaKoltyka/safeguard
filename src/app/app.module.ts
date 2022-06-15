@@ -23,7 +23,7 @@ import { MenuComponent } from './component/menu/menu.component';
     WhyWeComponent,
     ContactUsComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +34,6 @@ import { MenuComponent } from './component/menu/menu.component';
     RouterModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

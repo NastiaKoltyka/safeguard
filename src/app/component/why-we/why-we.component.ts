@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GetInformationService } from 'src/app/services/get-information.service';
 import { Info } from '../../interface/info';
 
@@ -7,12 +7,9 @@ import { Info } from '../../interface/info';
   templateUrl: './why-we.component.html',
   styleUrls: ['./why-we.component.scss'],
 })
-
-export class WhyWeComponent implements OnInit {
+export class WhyWeComponent {
   information: Info[] = [];
   constructor(private getInfo: GetInformationService) {
     this.information = this.getInfo.getAboutOurCompany();
   }
-
-  ngOnInit(): void { }
 }

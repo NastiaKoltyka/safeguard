@@ -1,5 +1,5 @@
 export interface Info {
-    counter: string,
-    description:string,
-    definition:string
+  counter: string;
+  description: string;
+  definition: string;
 }
