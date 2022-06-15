@@ -1,4 +1,5 @@
 import { Component,  OnInit } from '@angular/core';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,15 @@ export class HeaderComponent implements OnInit {
   menuIsOpened = false;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   
+
+  }
 
   openMenu() {
     this.menuIsOpened = true;
   }
   closeWindow() {
-    console.log('close')
     this.menuIsOpened = false;
   }
 }

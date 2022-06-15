@@ -12,6 +12,9 @@
     height: auto;
     margin-bottom: 131px;
   }
+  @include for-phone {
+    margin-bottom: 90px;
+  }
   .container {
     width: 1170px;
     margin: auto;
@@ -71,7 +74,7 @@
       .wrapper {
         width: 270px;
         height: 294px;
-        background: #ffffff;
+        background: white;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
         border-radius: 12px;
         font-family: $ubuntu-font;
@@ -110,7 +113,7 @@
           font-size: 16px;
           line-height: 29px;
           text-align: center;
-          color: #999999;
+          color: $gray;
           @include for-phone{
             font-size: 10px;
             line-height: 18px;

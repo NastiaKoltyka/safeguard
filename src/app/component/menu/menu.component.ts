@@ -16,7 +16,6 @@ export class MenuComponent implements OnInit {
   close(){
     this.menuIsOpened=false;
     this.menuIsClosed.emit();
-    console.log(this.menuIsOpened)
   }
 
 }

@@ -6,6 +6,7 @@
 .main {
   width: 1170px;
   margin: 0px auto;
+
   @include for-tablet {
     width: 100%;
     display: flex;
@@ -18,27 +19,33 @@
     text-transform: uppercase;
     margin-bottom: 116px;
     @include title;
+
     @include for-tablet {
       width: 570px;
     }
-    @include for-phone{
+
+    @include for-phone {
       width: 327px;
       height: 48px;
       font-size: 32px;
       line-height: 48px;
-      margin-top: 50px;
+      margin: 0px 0px 75px;
     }
   }
+
   .wrapper {
     display: flex;
     justify-content: space-between;
+
     @include for-tablet {
       width: 570px;
       flex-direction: column;
     }
-    @include for-phone{
+
+    @include for-phone {
       width: 327px;
     }
+
     div {
       font-family: $ubuntu-font;
 
@@ -47,11 +54,13 @@
         height: 60px;
         background: #f3f3f3;
         border-radius: 12px;
-        @include for-phone{
+
+        @include for-phone {
           width: 40px;
           height: 40px;
         }
       }
+
       .work-title {
         font-weight: 700;
         font-size: 24px;
@@ -59,25 +68,29 @@
         position: relative;
         bottom: 48px;
         left: 24px;
-        @include for-phone{
+
+        @include for-phone {
           font-weight: 700;
           font-size: 20px;
           line-height: 32px;
           bottom: 35px;
         }
       }
+
       .work-description {
         margin-left: 24px;
         margin-top: -27px;
         font-weight: 400;
         font-size: 16px;
         line-height: 29px;
-        color: #999999;
-        @include for-phone{
+        color: $gray;
+
+        @include for-phone {
           font-size: 14px;
           line-height: 160%;
         }
       }
+
       .link {
         display: flex;
         margin: 50px 0px 160px 24px;
@@ -86,11 +99,13 @@
         line-height: 18px;
         color: $yellow;
         cursor: pointer;
-        @include for-phone{
+
+        @include for-phone {
           font-size: 14px;
           line-height: 16px;
           margin: 19px 0px 60px 26px;
         }
+
         .arrow {
           margin-left: 15px;
           border: solid $yellow;
@@ -106,9 +121,11 @@
       }
     }
   }
+
   .title.contact {
     margin-bottom: 20px;
   }
+
   .form {
     width: 1170px;
     height: 819px;
@@ -116,60 +133,88 @@
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    padding: 60px;
+    padding: 10px 60px 60px 60px;
     background-color: white;
     position: relative;
+
     @include for-tablet {
       width: 570px;
       padding: 24px;
     }
-    @include for-phone{
+
+    @include for-phone {
       width: 327px;
       padding: 24px;
     }
-    label {
-      height: 14px;
-      font-family: $ubuntu-font;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 14px;
-      color: #999999;
-      margin-bottom: 6px;
-    }
-    input,
-    textarea {
-      width: 511px;
-      height: 37px;
-      border: 1px solid #00000033;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      margin-bottom: 50px;
-      font-family: $ubuntu-font;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 21px;
-      @include for-phone{
-        width: 279px;
-        font-size: 14px;
-        line-height: 16px;
+
+    .block {
+      margin-top: 50px;
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          height: 14px;
+          font-family: $ubuntu-font;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          margin-bottom: 6px;
+        }
+
+        input,
+        textarea {
+          width: 511px;
+          height: 37px;
+          border: 1px solid #00000033;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          font-family: $ubuntu-font;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+
+          @include for-phone {
+            width: 279px;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+
+        textarea {
+          height: 139px;
+          resize: none;
+
+          @include for-phone {
+            height: 90px;
+          }
+        }
+
+        input.ng-touched.ng-invalid,
+        textarea.ng-touched.ng-invalid {
+          border-bottom: 1px solid $red;
+          ;
+        }
+
+        input:focus,
+        textarea:focus {
+          outline: none;
+        }
+      }
+
+      .alert {
+        font-family: $ubuntu-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: $red;
+        position: absolute;
       }
     }
-    textarea {
-      height: 139px;
-      resize: none;
-      @include for-phone{
-        height: 90px;
-      }
-    }
-    input.ng-touched.ng-invalid,
-    textarea.ng-touched.ng-invalid {
-      border-bottom: 1px solid red;
-    }
-    input:focus,
-    textarea:focus {
-      outline: none;
-    }
+
     .submit {
       width: 170px;
       height: 61px;
@@ -184,7 +229,8 @@
       margin-top: 50px;
       border: none;
       cursor: pointer;
-      @include for-phone{
+
+      @include for-phone {
         width: 154px;
         height: 55px;
         font-size: 14px;
@@ -192,6 +238,7 @@
         margin: 40px auto 0px;
       }
     }
+
     .submit:hover {
       background: #daa001;
     }

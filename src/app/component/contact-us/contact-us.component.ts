@@ -28,38 +28,22 @@ export class ContactUsComponent implements OnInit {
   contactForm: FormGroup;
   constructor() {
     this.contactForm = new FormGroup({
-      fullName: new FormControl('Eugen Ulianov', Validators.required),
-      companyName: new FormControl('Oldmin Company', Validators.required),
-      "phoneNumber": new FormControl('555555555', Validators.pattern("[0-9]{10}")),
-      email: new FormControl('Oldmin@gmail.com', [
+      fullName: new FormControl('', Validators.required),
+      companyName: new FormControl('', Validators.required),
+      "phoneNumber": new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
+      email: new FormControl('', [
         Validators.required,
         Validators.email,
       ]),
-      message: new FormControl('With our global footprint and our specialized team members and partners we know what it takes to make sure that we can deliver a minimum risk environment for our clients.', Validators.required),
+      message: new FormControl(''),
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   submit() {
-    if(this.contactForm.valid){
+    if (this.contactForm.valid) {
       console.log(this.contactForm.value);
-    }
-  }
-}
-
-export interface ContactFormInfo{
-  fullName:string,
-  companyName:string,
-}
-
-class SomeModule{
-  readonly fullName: string = "Eugen Ulianov";
-  readonly companyName: string = "Oldmin Company"
-
-  GetContactFormPrefiller():ContactFormInfo {
-    return {
-      fullName: this.fullName,
-      companyName: this.companyName,
+      this.contactForm.reset();
     }
   }
 }

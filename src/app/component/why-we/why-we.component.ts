@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { info } from '../../interface/info';
+import { GetInformationService } from 'src/app/services/get-information.service';
+import { Info } from '../../interface/info';
 
 @Component({
   selector: 'app-why-we',
@@ -8,29 +9,10 @@ import { info } from '../../interface/info';
 })
 
 export class WhyWeComponent implements OnInit {
-  information:info[]= [
-    {
-      counter: '25+',
-      description:'years of experience',
-      definition:'In handling legal issues.'
-    },
-    {
-      counter: '230+',
-      description:'signature strategies',
-      definition:'Developed for our clients.'
-    },
-    {
-      counter: '145',
-      description:'corporate clients',
-      definition:'We helped thus far.'
-    },
-    {
-      counter: '30',
-      description:'employees working',
-      definition:'For your legal security.'
-    }
-  ];
-  constructor() {}
+  information: Info[] = [];
+  constructor(private getInfo: GetInformationService) {
+    this.information = this.getInfo.getAboutOurCompany();
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
